@@ -55,8 +55,8 @@ const initLangSelector = () => {
       CodeMirror.autoLoadMode(editor, language.mode);
       document.title =
         e.text && e.text !== "Plain Text"
-          ? `Paste - ${e.text} code snippet`
-          : "Paste";
+          ? `Snipp Hub - ${e.text} code snippet`
+          : "Snipp Hub";
     },
   });
 
@@ -176,7 +176,7 @@ const buildUrl = (rawData, mode) => {
       : `?l=${encodeURIComponent(select.selected())}`;
   const url = base + query + "#" + rawData;
   if (mode === "markdown") {
-    return `[Paste snippet](${url})`;
+    return `[Snipp Hub snippet](${url})`;
   }
   if (mode === "iframe") {
     const height = editor["doc"].height + 45;
