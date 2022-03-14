@@ -91,7 +91,7 @@ npm/microtip@0.2.2/microtip.min.css
             data-micromodal-trigger="description-modal"
             >About</a
           >
-          <a href="https://webdevpl.us/">Webdev+</a>
+          <em> <a href="https://webdevpl.us/">Webdev+</a></em>
         </div>
         <div class="col"></div>
         <div class="col-auto my-1">
@@ -176,17 +176,6 @@ npm/microtip@0.2.2/microtip.min.css
           Instead, the data is compressed and
           <span class="pink">stored entirely in the link</span> that you share,
           nowhere else!
-
-          <h3>Because of this design:</h3>
-          🗑️ Your data <span class="pink">cannot be deleted</span> from Snipp
-          Hub<br />
-          🔞 Your data <span class="pink">cannot be censored</span><br />
-          👁️ The server hosting Snipp Hub (or any clone of it)
-          <span class="pink">cannot read or access</span> your data<br />
-          ⏳ Your data will be accessible <span class="pink">forever</span> (as
-          long as you have the link)<br />
-          🔍 Google <span class="pink">will not index</span> your data, even if
-          your link is public<br />
         </div>
       </div>
     </div>
@@ -218,5 +207,15 @@ npm/codemirror@5.58.1/addon/scroll/simplescrollbars.js,
 npm/codemirror@5.58.1/mode/meta.min.js
 "></script>
     <script src="script.js"></script>
+
+    <script type="module">
+      import { annotate } from "https://unpkg.com/rough-notation?module";
+
+      const n1 = document.querySelector("em");
+
+      const a1 = annotate(n1, { type: "underline", color: "pink" });
+
+      a1.show();
+    </script>
   </body>
 </html>
